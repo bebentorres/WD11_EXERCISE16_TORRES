@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 16 - Conversion Calculator</title>
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<style>
+
+    body{
+        background-image: url(images/1.png);
+        background-attachment: fixed;
+        background-color:rgba(5, 107, 60, 0.1);
+    }
+    .acstyle{
+        background-color:rgb(5, 107, 60);
+        color: white;
+    }
+
+    h1{
+        color: rgb(5, 107, 60);
+    }
+    .accordion-body{
+        background-color: rgba(5, 107, 60, .10);
+    }
+</style>
+<body>
+<br><br><br>
+    <div class="container">
+        <h1 class="text-center bg-light"><i class="fa-solid fa-clock"></i>&nbsp;Simple Time Converter&nbsp;<i class="fa-solid fa-clock"></i></h1>
+
+    </div>    
+    <br>
+    <!-- Accordion -->
+    <div class="container">
+        <div class="accordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed text-center acstyle" data-bs-toggle="collapse" data-bs-target="#item-1">
+                        <i class="fa-solid fa-stopwatch"></i>&nbsp;Convert from Seconds
+                    </button>
+                </h2>
+                <div id="item-1" class="accordion-collapse collapse show">
+                    <div class="accordion-body text-center">
+                        <div>
+                            <input class="form-control text-center" type="number" placeholder = "input seconds" oninput ="secondsConverter(this.value)" onchange="secondsConverter(this.value)">
+                            <br>
+                            <p><span id="secMinutes"></span>&nbsp;minutes</p>
+                            <p><span id="secHours"></span>&nbsp;hours</p>
+                            <p><span id="secDays"></span>&nbsp;days</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2nd Item -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed text-center acstyle" data-bs-toggle="collapse" data-bs-target="#item-2">
+                        <i class="fa-solid fa-clock"></i>&nbsp;Convert from Minutes
+                    </button>
+                </h2>
+                <div id="item-2" class="accordion-collapse collapse show">
+                    <div class="accordion-body text-center">
+                        <div>
+                            <input class="form-control text-center" type="number" placeholder = "input minutes" oninput ="minutesConverter(this.value)" onchange="minutesConverter(this.value)">
+                            <br>
+                            <p><span id="minSeconds"></span>&nbsp;seconds</p>
+                            <p><span id="minHours"></span>&nbsp;hours</p>
+                            <p><span id="minDays"></span>&nbsp;days</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 3rd Item -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed text-center acstyle" data-bs-toggle="collapse" data-bs-target="#item-3">
+                        <i class="fa-solid fa-hourglass"></i>&nbsp;Convert from Hours
+                    </button>
+                </h2>
+                <div id="item-3" class="accordion-collapse collapse show">
+                    <div class="accordion-body text-center">
+                        <div>
+                            <input class="form-control text-center" type="number" placeholder = "input hours" oninput ="hoursConverter(this.value)" onchange="hoursConverter(this.value)">
+                            <br>
+                            <p><span id="hrSeconds"></span>&nbsp;seconds</p>
+                            <p><span id="hrMinutes"></span>&nbsp;minutes</p>
+                            <p><span id="hrDays"></span>&nbsp;days</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 4th Item -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed text-center acstyle" data-bs-toggle="collapse" data-bs-target="#item-4">
+                        <i class="fa-solid fa-calendar"></i>&nbsp;Convert from Days
+                    </button>
+                </h2>
+                <div id="item-4" class="accordion-collapse collapse show">
+                    <div class="accordion-body text-center">
+                        <div>
+                            <input class="form-control text-center" type="number" placeholder = "input days" oninput ="daysConverter(this.value)" onchange="daysConverter(this.value)">
+                            <br>
+                            <p><span id="daysSeconds"></span>&nbsp;seconds</p>
+                            <p><span id="daysMinutes"></span>&nbsp;minutes</p>
+                            <p><span id="daysHours"></span>&nbsp;hours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+</body>
+<script src="js/bootstrap.js"></script>
+<script src="main.js"></script>
+</html>
